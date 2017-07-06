@@ -13,7 +13,7 @@ public class RobotMap {
         public static final int RIGHT_MOTOR_2 = 4;
 
         // crane motor
-        public static final int CRAIN_MOTOR = 5;
+        public static final int CRAIN_MOTOR = 2;
 
         // feeder motor
         public static final int FEEDER_MOTOR = 6;
@@ -24,7 +24,7 @@ public class RobotMap {
     }
 
     public static interface DIO {
-        public static final int CRAIN_DOWN_SWITCH = 15;
-        public static final int CRAIN_UP_SWITCH = 16;
+        public static final int CRAIN_DOWN_SWITCH = 2;
+        public static final int CRAIN_UP_SWITCH = 6;
     }
 }
