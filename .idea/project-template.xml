@@ -1,3 +1,0 @@
-<template>
-  <input-field default="com.spikes2212.robot">IJ_BASE_PACKAGE</input-field>
-</template>

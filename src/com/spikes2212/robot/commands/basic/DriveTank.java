@@ -26,12 +26,19 @@ public class DriveTank extends Command {
 
     @Override
     protected void execute() {
+
         Robot.drivetrain.driveTank(leftSpeedSupplier.get(), rightSpeedSupplier.get());
     }
 
     @Override
     protected void end() {
+
         Robot.drivetrain.driveTank(0,0);
+    }
+
+    @Override
+    protected void interrupted() {
+        end();
     }
 
     @Override

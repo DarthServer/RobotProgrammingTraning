@@ -32,9 +32,11 @@ public class Robot extends IterativeRobot {
 
         // initializing the crane subsystem
         crane = new Crane(new VictorSP(RobotMap.PWM.CRAIN_MOTOR),
-                new DigitalInput(RobotMap.DIO.CRAIN_DOWN_UP), new DigitalInput(RobotMap.DIO.CRAIN_DOWN_SWITCH));
+                new DigitalInput(RobotMap.DIO.CRAIN_UP_SWITCH), new DigitalInput(RobotMap.DIO.CRAIN_DOWN_SWITCH));
 
         shooter = new Shooter(new VictorSP(RobotMap.PWM.SHOOTER_MOTOR));
+
+        feeder = new Feeder(new VictorSP(RobotMap.PWM.FEEDER_MOTOR));
 
         autonomousCommand = new MoveCollectBallsAndShoot();
 
@@ -45,7 +47,7 @@ public class Robot extends IterativeRobot {
 
     @Override
     public void disabledInit() {
-        super.disabledInit();
+
     }
 
     @Override

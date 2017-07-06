@@ -3,18 +3,20 @@ package com.spikes2212.robot.commands.basic;
 import com.spikes2212.robot.Robot;
 import edu.wpi.first.wpilibj.command.Command;
 
-public class MoveCraneUp extends Command {
+public class MoveCrane extends Command {
 
+    private double speed;
 
-    public static final double MOVE_UP_SPEED = 0.5;
-
-    public MoveCraneUp() {
+    public MoveCrane(double speed) {
         requires(Robot.crane);
+
+        this.speed = speed;
     }
 
+
     @Override
-    public void execute() {
-        Robot.crane.tryMove(MOVE_UP_SPEED);
+    protected void execute() {
+        Robot.crane.tryMove(speed);
     }
 
     @Override
@@ -29,6 +31,6 @@ public class MoveCraneUp extends Command {
 
     @Override
     protected boolean isFinished() {
-        return !Robot.crane.canMove(MOVE_UP_SPEED);
+        return !Robot.crane.canMove(speed);
     }
 }

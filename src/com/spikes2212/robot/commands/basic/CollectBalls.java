@@ -1,17 +1,19 @@
 package com.spikes2212.robot.commands.basic;
 
 import com.spikes2212.robot.Robot;
+import com.spikes2212.robot.subsystems.Feeder;
 import edu.wpi.first.wpilibj.command.Command;
 
 public class CollectBalls extends Command {
 
 
-    public static final double FEEDER_SPEED = 0.3;
 
+    private double speed;
 
-
-    public CollectBalls() {
+    public CollectBalls(double speed) {
         requires(Robot.feeder);
+
+        this.speed = speed;
     }
 
     @Override
@@ -20,7 +22,7 @@ public class CollectBalls extends Command {
 
     @Override
     protected void execute() {
-        Robot.feeder.move(FEEDER_SPEED);
+        Robot.feeder.feed(speed);
     }
 
 

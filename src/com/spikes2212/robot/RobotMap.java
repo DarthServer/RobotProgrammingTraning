@@ -25,6 +25,6 @@ public class RobotMap {
 
     public static interface DIO {
         public static final int CRAIN_DOWN_SWITCH = 15;
-        public static final int CRAIN_DOWN_UP = 16;
+        public static final int CRAIN_UP_SWITCH = 16;
     }
 }

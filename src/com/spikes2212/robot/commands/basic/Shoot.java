@@ -5,15 +5,16 @@ import edu.wpi.first.wpilibj.command.Command;
 
 public class Shoot extends Command {
 
-    public static final double SHOOTING_SPEED = 0.4;
+    private double speed;
 
-    public Shoot() {
+    public Shoot(double speed) {
         requires(Robot.shooter);
+        this.speed = speed;
     }
 
     @Override
     protected void execute() {
-        Robot.shooter.shoot(SHOOTING_SPEED);
+        Robot.shooter.shoot(speed);
     }
 
     @Override

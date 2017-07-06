@@ -1,11 +1,17 @@
 package com.spikes2212.robot.subsystems;
 
-import com.spikes2212.robot.commands.basic.MoveCrainDown;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class Crane extends Subsystem {
+
+    /**
+     * constants defining the speeds the crane has to move at
+     */
+
+    public static final double CRANE_UP_SPEED = 0.4;
+    public static final double CRANE_DOWN_SPEED = -0.4;
 
     /**
         two digital switches that indicates if the crane have moved out of the safe distance
@@ -15,7 +21,7 @@ public class Crane extends Subsystem {
     private DigitalInput downSwitch;
 
     /**
-        the speed controller that controls the motor that is used to move the crane
+        the speed controller that controls the motor that is used to feed the crane
     */
     private SpeedController motor;
 
@@ -31,23 +37,16 @@ public class Crane extends Subsystem {
         this.downSwitch = downSwitch;
     }
 
-    private void move(double speed) {
-        motor.set(speed);
-    }
-
     public boolean canMove(double speed) {
-        if ((speed > 0 && upSwitch.get()) || (speed < 0 && downSwitch.get()))
-            return false;
-        return true;
+        return !((speed > 0 && upSwitch.get()) || (speed < 0 && downSwitch.get()));
     }
 
     public void tryMove(double speed) {
-        if (canMove(speed)) move(speed);
+        if (canMove(speed)) motor.set(speed);;
     }
 
     @Override
     protected void initDefaultCommand() {
-        setDefaultCommand(new MoveCrainDown());
 
     }
 }

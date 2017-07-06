@@ -6,13 +6,15 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class Feeder extends Subsystem {
 
 
+    public static final double FEEDER_SPEED = 0.3;
+
     private SpeedController motor;
 
     public Feeder(SpeedController motor) {
         this.motor = motor;
     }
 
-    public void move(double speed) {
+    public void feed(double speed) {
         motor.set(speed);
     }
 
