@@ -15,6 +15,7 @@ public class OI /* GEVALD */ {
     private Joystick rightJoystick;
 
     private JoystickButton moveCraneUpButton;
+    private JoystickButton moveCraneDownButton;
     private JoystickButton shootButton;
     private JoystickButton collectBallsButton;
 
@@ -23,6 +24,9 @@ public class OI /* GEVALD */ {
         leftJoystick = new Joystick(1);
 
         moveCraneUpButton = new JoystickButton(rightJoystick, 3);
+        moveCraneDownButton = new JoystickButton(rightJoystick, 2);
+
+
         shootButton = new JoystickButton(leftJoystick, 1);
         collectBallsButton = new JoystickButton(leftJoystick, 2);
 
@@ -31,6 +35,8 @@ public class OI /* GEVALD */ {
 
     private void initButtons() {
         moveCraneUpButton.whileHeld(new MoveCrane(Crane.CRANE_UP_SPEED));
+        moveCraneDownButton.whileHeld(new MoveCrane(Crane.CRANE_DOWN_SPEED));
+
         shootButton.whileHeld(new Shoot(Shooter.SHOOTING_SPEED));
         collectBallsButton.whileHeld(new CollectBalls(Feeder.FEEDER_SPEED));
     }
