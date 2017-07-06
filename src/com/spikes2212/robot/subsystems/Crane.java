@@ -41,8 +41,10 @@ public class Crane extends Subsystem {
         return !((speed > 0 && upSwitch.get()) || (speed < 0 && downSwitch.get()));
     }
 
+    private void move(double speed) {motor.set(speed);}
+
     public void tryMove(double speed) {
-        if (canMove(speed)) motor.set(speed);;
+        if (canMove(speed)) move(speed);
     }
 
     @Override
