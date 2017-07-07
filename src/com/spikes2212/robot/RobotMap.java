@@ -27,4 +27,19 @@ public class RobotMap {
         public static final int CRAIN_DOWN_SWITCH = 2;
         public static final int CRAIN_UP_SWITCH = 6;
     }
+
+    public static interface JOYSTIC {
+
+        // joystic ports
+        public static final int LEFT_JOYSTIC = 0;
+        public static final int RIGHT_JOYSTIC = 1;
+
+        // right joystick buttons
+        public static final int MOVE_CRANE_UP_BUTTON   = 3;
+        public static final int MOVE_CRANE_DOWN_BUTTON = 2;
+
+        // left joystick buttons
+        public static final int SHOOT_BUTTON = 1;
+        public static final int COLLECT_BALLS_BUTTON = 2;
+    }
 }

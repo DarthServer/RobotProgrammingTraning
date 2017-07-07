@@ -20,15 +20,15 @@ public class OI /* GEVALD */ {
     private JoystickButton collectBallsButton;
 
     public OI() {
-        rightJoystick = new Joystick(0);
-        leftJoystick = new Joystick(1);
+        rightJoystick = new Joystick(RobotMap.JOYSTIC.RIGHT_JOYSTIC);
+        leftJoystick = new Joystick(RobotMap.JOYSTIC.LEFT_JOYSTIC);
 
-        moveCraneUpButton = new JoystickButton(rightJoystick, 3);
-        moveCraneDownButton = new JoystickButton(rightJoystick, 2);
+        moveCraneUpButton = new JoystickButton(rightJoystick, RobotMap.JOYSTIC.MOVE_CRANE_UP_BUTTON);
+        moveCraneDownButton = new JoystickButton(rightJoystick, RobotMap.JOYSTIC.MOVE_CRANE_DOWN_BUTTON);
 
 
-        shootButton = new JoystickButton(leftJoystick, 1);
-        collectBallsButton = new JoystickButton(leftJoystick, 2);
+        shootButton = new JoystickButton(leftJoystick, RobotMap.JOYSTIC.SHOOT_BUTTON);
+        collectBallsButton = new JoystickButton(leftJoystick, RobotMap.JOYSTIC.COLLECT_BALLS_BUTTON);
 
         initButtons();
     }
