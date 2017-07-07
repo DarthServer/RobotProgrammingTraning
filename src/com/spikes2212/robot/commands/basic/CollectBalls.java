@@ -1,7 +1,6 @@
 package com.spikes2212.robot.commands.basic;
 
 import com.spikes2212.robot.Robot;
-import com.spikes2212.robot.subsystems.Feeder;
 import edu.wpi.first.wpilibj.command.Command;
 
 public class CollectBalls extends Command {

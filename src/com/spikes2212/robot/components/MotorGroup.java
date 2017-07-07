@@ -1,4 +1,4 @@
-package com.spikes2212.robot.subsystems.components;
+package com.spikes2212.robot.components;
 
 import edu.wpi.first.wpilibj.SpeedController;
 
