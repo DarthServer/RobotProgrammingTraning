@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * This class is used to wrap a number of {@link SpeedController} into one {@link SpeedController} interface
+ * This class is used to wrap a number of {@link SpeedController} into one {@link SpeedController} object
  *
  *
  */
@@ -87,7 +87,7 @@ public class MotorGroup implements SpeedController {
 
 
     /**
-     * stops the motor
+     * stops the speed controllers
      */
     @Override
     public void stopMotor() {
