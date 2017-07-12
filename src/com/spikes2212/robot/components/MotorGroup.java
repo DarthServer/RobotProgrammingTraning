@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * This class is used to wrap a number of {@link SpeedController} into one {@link SpeedController} object
+ * This class is used to wrap a number of {@link SpeedController} as one
  *
  *
  */
